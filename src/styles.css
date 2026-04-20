@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap");
 
 @custom-variant dark (&:is(.dark *));
 
@@ -107,13 +108,14 @@
 @theme inline {
   --font-display: "Playfair Display", Georgia, serif;
   --animate-wave: wave 2.5s ease-in-out infinite;
-  @keyframes wave {
-    0%, 60%, 100% { transform: rotate(0deg); }
-    10%, 30% { transform: rotate(14deg); }
-    20% { transform: rotate(-8deg); }
-    40% { transform: rotate(-4deg); }
-    50% { transform: rotate(10deg); }
-  }
+}
+
+@keyframes wave {
+  0%, 60%, 100% { transform: rotate(0deg); }
+  10%, 30% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
 }
 
 .dark {
@@ -149,6 +151,18 @@
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
+
+  --gradient-text: linear-gradient(135deg, oklch(0.78 0.18 280) 0%, oklch(0.8 0.18 350) 100%);
+  --gradient-avatar: linear-gradient(135deg, oklch(0.7 0.2 60) 0%, oklch(0.65 0.22 340) 100%);
+  --gradient-blob-1: radial-gradient(circle, oklch(0.5 0.2 280) 0%, transparent 70%);
+  --gradient-blob-2: radial-gradient(circle, oklch(0.5 0.2 60) 0%, transparent 70%);
+  --shadow-elegant: 0 20px 50px -15px oklch(0 0 0 / 0.5);
+}
+
+@layer base {
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+  }
 }
 
 @layer base {
