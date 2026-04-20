@@ -64,8 +64,8 @@
 :root {
   --radius: 20px;
 
-  /* Warm cream background */
-  --background: oklch(0.98 0.018 85);
+  /* Warm peach/orange background */
+  --background: oklch(0.93 0.06 55);
   --foreground: oklch(0.2 0.02 280);
 
   --card: oklch(1 0 0);
